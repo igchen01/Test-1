@@ -22,11 +22,11 @@ filtered_df = df[
 st.subheader(f"Admission Info for Year: {selected_year}, Semester: {selected_term}")
 col1, col2, col3 = st.columns((3))
 with col1:
-  st.metric(label=f"Applications:", value=f"{filtered_df['Applications']}")
+  st.metric(label=f"Applications:", value=f"{filtered_df['Applications'].iloc[0]}")
 with col2:
-  st.metric(label=f"Admitted:", value=f"{filtered_df['Admitted']}")
+  st.metric(label=f"Admitted:", value=f"{filtered_df['Admitted'].iloc[0]}")
 with col3:
-  st.metric(label=f"Enrolled:", value=f"{filtered_df['Enrolled']}")
+  st.metric(label=f"Enrolled:", value=f"{filtered_df['Enrolled'].iloc[0]}")
 
 
 
