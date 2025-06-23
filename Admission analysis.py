@@ -19,7 +19,7 @@ filtered_df = df[
     (df['Term'].str.lower() == selected_term.lower())
 ]
 
-st.subheader(f"Admission Info for Year: {selected_year}, Semester: {selected_term}")
+st.subheader(f"Admission Info for Year: {selected_year} and Semester: {selected_term}")
 col1, col2, col3 = st.columns((3))
 with col1:
   st.metric(label=f"Applications:", value=f"{filtered_df['Applications'].iloc[0]}")
