@@ -150,12 +150,10 @@ if not selected_term:
   yearly_retention = df.groupby('Year')['Retention Rate (%)'].mean().reset_index()
   yearly_satisfication = df.groupby('Year')['Student Satisfaction (%)'].mean().reset_index()
   st.subheader(f"Retention Rate (Full Year)")
-  print('1')
 else:
   yearly_retention = df[df['Term'] == selected_term]
   yearly_satisfication = df[df['Term'] == selected_term]
   st.subheader(f"Retention Rate (Semester: {selected_term})")
-  print('2')
 
 
 #Plotting for Rentention Rate
@@ -192,3 +190,35 @@ with col1:
   st.plotly_chart(fig, use_container_width=True)
 with col2:
   st.plotly_chart(fig2, use_container_width=True)
+
+
+
+
+######################
+# Use bar chart to show that Fall & Spring are the same
+
+
+# Use bar chart to show that Fall & Spring are the same
+fig = px.bar(
+    df,
+    x='Year',
+    y='Retention Rate (%)',
+    color='Term',
+    barmode='group',
+    title='Retention Rate Trend: Spring vs Fall',
+    color_discrete_map={
+        'Spring': 'green',
+        'Fall': 'gold'  # gold = nice yellow tone
+    }
+)
+
+fig.update_layout(
+    xaxis_title='Year',
+    yaxis_title='Retention Rate (%)',
+    xaxis=dict(tickmode='linear', dtick=1)
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+
