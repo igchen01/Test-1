@@ -293,7 +293,7 @@ fig_term.update_layout(
 
 tab1, tab2, tab3 = st.tabs(["Admission Information", "Enrollment Analysis", "Retention & Satisfication"])
 with tab1:
-  st.subheader(f"Admission Info for Year: {selected_year} and Semester: {selected_term}")
+  st.subheader(f"Year: {selected_year} and Semester: {selected_term}")
   st.write("General information of the dataset can be searched by selecting the respective year and term.")
   col1, col2, col3 = st.columns((3))
   with col1:
