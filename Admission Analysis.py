@@ -309,12 +309,19 @@ with tab1:
     st.plotly_chart(fig_enrolled, use_container_width=True)
   with col3:
     st.plotly_chart(fig_department_enrolled, use_container_width=True)
+st.write("General information of the dataset can be searched by selecting the respective year and term.")
 
 with tab2:
   st.subheader(f"Enrollment analysis for (2015-2024)")
+
   st.plotly_chart(fig_trend, use_container_width=True)
+  st.write('From the trends of applications, admission, and enrollment above, we can see a steady increase in applications over time, while enrollments stayed relatively even throughout the years with only small increments. Admission numbers seemed to follow the trend of applications, but surprisingly, it did not reflect in enrollments numbers.')
+
   st.plotly_chart(fig_trend2, use_container_width=True)
+  st.write('From the trend of department enrollments, it appears that Engineering has been gaining the most traction, with Business and Arts following similar trends to a lesser degree. However, Science enrollment has experienced a slight decline in recent years. Furthermore, Engineering consistently had the highest number of students, with Business in second. Arts and Science initially had similar enrollment numbers, but gradually diverged over time.')
+
   st.plotly_chart(fig_trend3, use_container_width=True)
+  st.write('From the plot of admission and enrollment rates, it is observed that both rates remained relatively steady throughout the years. While increased applications led to higher total numbers of admissions and enrollments, it appears the school maintains an admission policy of around 60%. Meanwhile, the enrollment rate has somehow consistently stayed around 40%, with only a slight decline in recent years.')
 
 with tab3:
   st.subheader(f"Retention & Student Satisfication Rate (2015-2024)")
@@ -323,4 +330,7 @@ with tab3:
     st.plotly_chart(fig_rate1, use_container_width=True)
   with col2:
     st.plotly_chart(fig_rate2, use_container_width=True)
-  st.plotly_chart(fig_term, use_container_width=True)   
+  st.write('The retention rate appeared to have dipped back down around 2020, but overall, the trend indicates improvement, especially in recent years. Student satisfaction seems to correlate with the retention rate, with a noticeable drop in both metrics around 2020. Then,it follows a similar upward trend. Overall, the school appears to be doing well.')
+
+  st.plotly_chart(fig_term, use_container_width=True)
+  st.write('Surprisingly, the plot above confirms that the data for the spring and fall semesters of the same year have exactly the same values. The previous graphs from admission and enrollment had indicated this as well. Perhaps there has been an error in recording the data set.')   
