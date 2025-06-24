@@ -294,6 +294,7 @@ fig_term.update_layout(
 tab1, tab2, tab3 = st.tabs(["Admission Information", "Enrollment Analysis", "Retention & Satisfication"])
 with tab1:
   st.subheader(f"Admission Info for Year: {selected_year} and Semester: {selected_term}")
+  st.write("General information of the dataset can be searched by selecting the respective year and term.")
   col1, col2, col3 = st.columns((3))
   with col1:
     st.metric(label=f"Applications:", value=f"{filtered_df['Applications'].iloc[0]}")
@@ -309,7 +310,6 @@ with tab1:
     st.plotly_chart(fig_enrolled, use_container_width=True)
   with col3:
     st.plotly_chart(fig_department_enrolled, use_container_width=True)
-st.write("General information of the dataset can be searched by selecting the respective year and term.")
 
 with tab2:
   st.subheader(f"Enrollment analysis for (2015-2024)")
