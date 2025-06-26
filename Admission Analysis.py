@@ -322,7 +322,7 @@ with tab2:
 
   st.plotly_chart(fig_trend3, use_container_width=True)
   st.write('From the plot of admission and enrollment rates, it is observed that both rates remained relatively steady throughout the years. While increased applications led to higher total numbers of admissions and enrollments, it appears the school maintains an admission policy of around 60%. Meanwhile, the enrollment rate has somehow consistently stayed around 40%, with only a slight decline in recent years.')
-
+  st.write('The stagnation of the enrollment rate could be due to multiple reasons, such as losing to competitors or the school simply being unable to accommodate more students in terms of raw numbers. If the latter is the case, the school could consider expanding its campus and promoting its Science and Arts departments to attract more students.')
 with tab3:
   st.subheader(f"Retention & Student Satisfication Rate (2015-2024)")
   col1, col2 = st.columns((2))
